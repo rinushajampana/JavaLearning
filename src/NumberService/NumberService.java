@@ -22,11 +22,17 @@ public class NumberService {
 	/*
 	 * Parameterized constructor
 	 */
+public NumberService() {
+		
+	}
 	public NumberService(int number) {
 		super();
 		this.number = number;
 	}
-
+	/*
+	 * no-argument constructor 
+	 */
+	
 	/*
 	 * Evaluates the number
 	 */
@@ -41,29 +47,30 @@ public class NumberService {
 	/*
 	 * Returns sum of two numbers
 	 */
-	public int addNumbers(int num1, int num2) {
-		return num1 + num2;
+	public double addNumbers(int num1, int num2) {
+		return (double)num1 + num2;
 	}
 
 	/*
 	 * Returns difference of two numbers
 	 */
-	public int subNumbers(int num1, int num2) {
-		return num1 - num2;
+	public double subNumbers(int num1, int num2) {
+		return (double)num1 - num2;
 	}
 
 	/*
 	 * Returns Multiplication of two numbers
 	 */
-	public int mulNumbers(int num1, int num2) {
-		return num1 * num2;
+	public double mulNumbers(int num1, int num2) {
+		return (double)num1 * num2;
 	}
 
 	/*
 	 * Returns division of two numbers
 	 */
-	public int divNumbers(int num1, int num2) {
-		return num1 / num2;
+	public double divNumbers(int num1, int num2) {
+		double result = (double) num1 / num2;
+		return result;
 	}
 
 }

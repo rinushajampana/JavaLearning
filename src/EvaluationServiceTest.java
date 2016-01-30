@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class EvaluationServiceTest {
@@ -22,6 +24,18 @@ public class EvaluationServiceTest {
 		System.out.print("Enter a number: ");
 		number = sc.nextInt();
 		service.evaluateSubjectMarks(number);
+	try {
+		sc = new Scanner(new File("src/Files/numbers.txt"));
+		System.out.println("***Reading from File***");
+		
+		while (sc.hasNext()) {
+			int i = sc.nextInt();
+			service.evaluateSubjectMarks(i);;
+		}
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
 
+	}
 }

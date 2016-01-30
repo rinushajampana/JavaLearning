@@ -26,10 +26,9 @@ public class NumberServiceTest {
 		service.evaluateNumber(number);
 
 		// File output Stream
-		
+		System.out.println("***Reading from File***");
 		try {
-			//********* Unable to run to : getting a FileNotFound Exception ******//
-			sc = new Scanner(new File("Files/Numbers.txt"));
+			sc = new Scanner(new File("src/Files/numbers.txt"));
 
 			while (sc.hasNext()) {
 				int i = sc.nextInt();
